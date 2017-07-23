@@ -9,5 +9,7 @@ urlpatterns = [
     #登录界面
     url(r'^login/$', login, {'template_name': 'users/login.html'},
         name='login'),
+    #注销
+    url(r'^logout/$', views.logout_view, name='logout'),
 
 ]
