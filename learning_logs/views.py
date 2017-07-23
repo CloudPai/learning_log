@@ -69,10 +69,10 @@ def edit_entry(request, entry_id):
     topic = entry.topic
 
     if request.method != 'POST':
-        # Initial request; pre-fill form with the current entry.
+        #初次请求，使用当前条目填充表单
         form = EntryForm(instance=entry)
     else:
-        # POST data submitted; process data.
+        #POST提交数据，对数据进行处理
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
